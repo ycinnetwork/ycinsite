@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Volunteer — YCIN</title>
+  <style>
+    :root{--navy:#0b2340;--white:#ffffff;--gold:#C99A2A;--muted:#6b7a8a;--bg:#f4f6f9;--max-width:800px;font-family:Inter, system-ui, Arial;}
+    body{margin:0;background:var(--bg);color:var(--navy)}
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+    header{background:linear-gradient(180deg, rgba(11,35,64,1), rgba(11,35,64,0.95));color:var(--white)}
+    .nav-bar{display:flex;align-items:center;justify-content:space-between;padding:18px 24px}
+    .logo{width:48px;height:48px;background:var(--white);border-radius:8px;display:grid;place-items:center;color:var(--navy);font-weight:700}
+    .card{background:var(--white);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #d7e0ea;font-size:14px;margin-top:8px}
+    .form-submit{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:8px;border:0;background:var(--navy);color:var(--white);font-weight:700;cursor:pointer}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-bar container">
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="logo">YCIN</div>
+        <div>
+          <div style="font-weight:700">Youth Civic Impact Network</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.8)">Because justice starts with education.</div>
+        </div>
+      </div>
+      <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="articles.html">Articles</a></nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:28px">
+    <div class="card">
+      <h1 style="margin-top:0">Volunteer / Mentor Sign-up</h1>
+      <p style="color:var(--muted)">Thanks — volunteers are the backbone of YCIN. Complete the form and we'll reach out with opportunities.</p>
+
+      <!-- Formsubmit (free) -->
+      <form action="https://formsubmit.co/ycinnetwork@gmail.com" method="POST" autocomplete="on" style="margin-top:12px">
+        <input type="hidden" name="_subject" value="YCIN Volunteer Sign-up">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <label>
+          Full name
+          <input type="text" name="Full name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="Email" required>
+        </label>
+        <label>
+          Organization / School (optional)
+          <input type="text" name="Organization / School">
+        </label>
+        <label>
+          Role (attorney, student, teacher, etc.)
+          <input type="text" name="Role">
+        </label>
+        <label>
+          Areas you'd like to help
+          <select name="Areas">
+            <option>Mock trial coaching</option>
+            <option>Policy lab mentorship</option>
+            <option>College essay workshops</option>
+            <option>Events & logistics</option>
+            <option>Fundraising / partnerships</option>
+          </select>
+        </label>
+        <label>
+          Message / availability
+          <textarea name="Message" placeholder="Tell us about your availability, experience, or questions..." required></textarea>
+        </label>
+
+        <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
+          <button class="form-submit" type="submit">Send sign-up</button>
+          <div style="color:var(--muted);font-size:13px">You'll receive confirmation at <strong>ycinnetwork@gmail.com</strong></div>
+        </div>
+      </form>
+
+      <p style="color:var(--muted);margin-top:12px">Privacy note: Volunteer contact info will only be used for YCIN outreach and not shared without consent.</p>
+    </div>
+  </main>
+
+  <footer style="background:#051426;color:#fff;padding:18px;margin-top:28px">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center">
+      <div><strong>Youth Civic Impact Network</strong><div style="font-size:13px">Because justice starts with education.</div></div>
+      <div style="text-align:right">Contact: ycinnetwork@gmail.com</div>
+    </div>
+  </footer>
+</body>
+</html>
