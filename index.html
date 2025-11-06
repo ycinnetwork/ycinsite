@@ -23,4 +23,195 @@
     /* unified CTA button */
     .btn{
       display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;font-weight:800;border:0;background:var(--gold);color:var(--navy);cursor:pointer;
-      box-shadow:0 6px 18px rgba(201,154,
+      box-shadow:0 6px 18px rgba(201,154,42,0.12)
+    }
+    .btn.ghost{background:transparent;color:rgba(255,255,255,0.95);border:1px solid rgba(255,255,255,0.06)}
+    /* hero */
+    .hero{padding:48px 24px 64px}
+    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;max-width:var(--max-width);margin:0 auto}
+    .eyebrow{display:inline-block;background:rgba(201,154,42,0.12);color:var(--gold);padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
+    .headline{color:var(--white);font-size:34px;margin:12px 0 10px}
+    .lead{color:rgba(255,255,255,0.95);line-height:1.45;margin-bottom:18px}
+    .hero-card{background:var(--white);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.06);color:var(--navy)}
+    /* sections */
+    section{padding:36px 18px}
+    .two-col{display:grid;grid-template-columns:1fr 360px;gap:28px;max-width:var(--max-width);margin:0 auto;align-items:start}
+    .card{background:var(--white);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04);margin-bottom:18px}
+    .muted{color:var(--muted)}
+    /* programs */
+    .programs{display:flex;flex-direction:column;gap:12px}
+    .program-item{display:flex;gap:12px;align-items:flex-start}
+    .dot{width:10px;height:10px;background:var(--gold);border-radius:50%;margin-top:6px}
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:10px;display:block}
+    /* news */
+    .news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .news-item{background:linear-gradient(180deg, #fff, #f8fafc);padding:14px;border-radius:10px;border:1px solid #eef3f7}
+    .news-meta{font-size:12px;color:var(--muted);margin-bottom:8px}
+    .news-title{font-weight:700;margin:0 0 8px}
+    /* footer */
+    footer{background:#051426;padding:28px 18px;color:rgba(255,255,255,0.85)}
+    .footer-grid{max-width:var(--max-width);margin:0 auto;display:flex;justify-content:space-between;gap:18px;align-items:center}
+    @media (max-width:920px){.hero-grid{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}.nav-bar{padding:12px}nav a{display:none}}
+    @media (max-width:520px){.headline{font-size:26px}}
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <div class="nav-bar">
+      <div class="brand">
+        <div class="logo">YCIN</div>
+        <div>
+          <div style="font-weight:800;font-size:16px">Youth Civic Impact Network</div>
+          <div style="color:rgba(255,255,255,0.78);font-size:13px">Because justice starts with education.</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="articles.html">Articles</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a class="btn" href="mailto:ycinnetwork@gmail.com">Contact</a>
+      </nav>
+    </div>
+
+    <!-- hero -->
+    <div class="hero">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Youth Civic Impact Network</span>
+          <h1 class="headline">Preparing youth for law, government, and public service.</h1>
+          <p class="lead">YCIN runs practical workshops, mentorships, and policy labs that introduce students to law and civic careers. We focus on access, real experience, and college-ready outcomes.</p>
+          <div style="display:flex;gap:12px;margin-top:12px">
+            <a class="btn" href="volunteer.html">Volunteer / Mentor</a>
+            <a class="btn ghost" href="about.html">Learn more</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h3 style="margin-top:0">Get involved</h3>
+          <p class="muted">Law students, attorneys, teachers, and civic leaders — join as mentors or host a session. We provide materials and a program template.</p>
+          <div style="display:flex;gap:10px;margin-top:12px">
+            <a class="btn" href="volunteer.html">Sign up to volunteer</a>
+            <a class="btn ghost" href="mailto:ycinnetwork@gmail.com">Email us</a>
+          </div>
+          <hr style="border:none;height:1px;background:#eef3f7;margin:16px 0;border-radius:2px">
+          <div style="display:grid;gap:8px">
+            <div style="font-size:13px;color:var(--muted)">Upcoming</div>
+            <div style="font-weight:700">Mock Trial Bootcamp — June 2026</div>
+            <div class="muted" style="font-size:13px">Partner High School / Virtual</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <!-- about / programs -->
+  <section id="about">
+    <div class="container two-col">
+      <div>
+        <div class="card" data-sr>
+          <h2>Our mission</h2>
+          <p class="muted">Youth Civic Impact Network empowers young people to pursue careers in law, public policy, and government with hands-on programs and mentorship.</p>
+          <p>We partner with schools, law firms, and civic institutions to provide mock trials, policy labs, and college-prep experiences that strengthen applications and career readiness.</p>
+        </div>
+
+        <div class="card" data-sr>
+          <h2>Programs</h2>
+          <div class="programs" style="margin-top:12px">
+            <div class="program-item"><div style="flex:1"><strong>Mock Trial & Advocacy</strong><p class="muted" style="margin:6px 0">Courtroom basics, argumentation, public speaking.</p></div><div class="dot"></div></div>
+            <div class="program-item"><div style="flex:1"><strong>Policy Lab</strong><p class="muted" style="margin:6px 0">Research local problems and pitch policy solutions.</p></div><div class="dot"></div></div>
+            <div class="program-item"><div style="flex:1"><strong>College & Internship Prep</strong><p class="muted" style="margin:6px 0">Application guidance and essay workshops.</p></div><div class="dot"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- gallery / photos (placeholders) -->
+      <aside>
+        <div class="card" data-sr>
+          <h3 style="margin-top:0">Photos</h3>
+          <div class="gallery">
+            <!-- placeholder images; replace with your own files (e.g., images/team1.jpg) -->
+            <img src="https://source.unsplash.com/600x400/?mock-trial" alt="Mock trial">
+            <img src="https://source.unsplash.com/600x400/?capitol" alt="Capitol building">
+            <img src="https://source.unsplash.com/600x400/?students,workshop" alt="Students workshop">
+            <img src="https://source.unsplash.com/600x400/?law,books" alt="Law books">
+          </div>
+          <p class="muted" style="margin-top:10px">Replace these with your own workshop or event photos when ready.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- News & Insights -->
+  <section id="news">
+    <div class="container">
+      <h2>News & Insights</h2>
+      <p class="muted">A mix of curated links and YCIN explainers for students.</p>
+
+      <div style="margin-top:16px" class="news-grid">
+        <!-- external link -->
+        <article class="news-item" data-sr>
+          <div class="news-meta">External · Oct 21, 2025</div>
+          <h3 class="news-title"><a href="https://www.nytimes.com/" target="_blank" rel="noopener">Why young people should care about local elections</a></h3>
+          <p class="muted news-excerpt">How local policy affects school funding and internship opportunities.</p>
+        </article>
+
+        <!-- YCIN writeup -->
+        <article class="news-item" data-sr>
+          <div class="news-meta">YCIN Brief · Oct 10, 2025</div>
+          <h3 class="news-title"><a href="articles.html#post-1">Understanding a recent school funding decision — student guide</a></h3>
+          <p class="muted news-excerpt">A short explainer for students: what happened and what to do next.</p>
+        </article>
+
+        <!-- curated -->
+        <article class="news-item" data-sr>
+          <div class="news-meta">External · Sep 30, 2025</div>
+          <h3 class="news-title"><a href="https://www.politico.com/" target="_blank" rel="noopener">How law clinics create career pathways for students</a></h3>
+          <p class="muted news-excerpt">Examples of clinics that help students get real experience.</p>
+        </article>
+      </div>
+
+      <div style="margin-top:12px"><a class="btn" href="articles.html">Read full feed</a></div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+          <div class="logo" style="width:44px;height:44px;font-size:14px">YCIN</div>
+          <div>
+            <div style="font-weight:800">Youth Civic Impact Network</div>
+            <div class="muted" style="color:rgba(255,255,255,0.9)">Because justice starts with education.</div>
+          </div>
+        </div>
+        <div style="color:rgba(255,255,255,0.85)">© <span id="year"></span> Youth Civic Impact Network</div>
+      </div>
+
+      <div style="text-align:right">
+        <div style="color:rgba(255,255,255,0.9)">Contact: ycinnetwork@gmail.com</div>
+        <div style="color:rgba(255,255,255,0.75);margin-top:6px">Built with care — ready to scale.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- scripts -->
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    // simple scroll reveal defaults
+    ScrollReveal().reveal('[data-sr], .headline, .hero-card, .news-item, .card, .gallery img', {
+      distance: '30px',
+      origin: 'bottom',
+      opacity: 0,
+      interval: 80,
+      duration: 650,
+      easing: 'cubic-bezier(.2,.8,.2,1)'
+    });
+  </script>
+</body>
+</html>
