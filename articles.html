@@ -1,67 +1,97 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Articles — YCIN</title>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Articles — YCIN</title>
   <style>
-    :root{--navy:#0b2340;--white:#ffffff;--gold:#C99A2A;--muted:#6b7a8a;--bg:#f4f6f9;--max-width:1100px;font-family:Inter, system-ui, Arial;}
+    :root{--navy:#0b2340;--white:#ffffff;--gold:#C99A2A;--muted:#6b7a8a;--bg:#f4f6f9;--max-width:1120px;font-family:Inter,system-ui,Arial;}
     body{margin:0;background:var(--bg);color:var(--navy)}
     .container{max-width:var(--max-width);margin:0 auto;padding:28px}
     header{background:linear-gradient(180deg, rgba(11,35,64,1), rgba(11,35,64,0.95));color:var(--white)}
-    .nav-bar{display:flex;align-items:center;justify-content:space-between;padding:18px 24px}
-    .logo{width:48px;height:48px;background:var(--white);border-radius:8px;display:grid;place-items:center;color:var(--navy);font-weight:700}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .nav-bar{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:var(--max-width);margin:0 auto}
+    .logo{width:48px;height:48px;background:var(--white);border-radius:8px;display:grid;place-items:center;color:var(--navy);font-weight:800}
+    nav a{color:rgba(255,255,255,0.95);margin-left:18px;font-weight:700}
+    .hero-large{background:var(--white);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:1fr 420px;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+    .hero-large img{width:100%;height:100%;object-fit:cover}
+    .hero-large .content{padding:22px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
     .card{background:var(--white);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
     .meta{font-size:12px;color:var(--muted)}
   </style>
 </head>
 <body>
   <header>
-    <div class="nav-bar container">
+    <div class="nav-bar">
       <div style="display:flex;gap:12px;align-items:center">
         <div class="logo">YCIN</div>
         <div>
-          <div style="font-weight:700">Youth Civic Impact Network</div>
-          <div style="font-size:13px;color:rgba(255,255,255,0.8)">Because justice starts with education.</div>
+          <div style="font-weight:800">Youth Civic Impact Network</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.78)">Because justice starts with education.</div>
         </div>
       </div>
-      <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="volunteer.html">Volunteer</a></nav>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a class="btn" href="mailto:ycinnetwork@gmail.com" style="margin-left:12px;background:var(--gold);color:var(--navy);padding:8px 12px;border-radius:8px;font-weight:800;text-decoration:none">Contact</a>
+      </nav>
     </div>
   </header>
 
   <main class="container" style="padding-top:28px">
     <h1 style="margin-top:0">News & Insights</h1>
-    <p style="color:var(--muted)">Curated external links and YCIN short writeups for students.</p>
+    <p style="color:var(--muted)">Featured explainers and curated coverage for students.</p>
 
-    <div style="height:18px"></div>
-
-    <section class="grid">
-      <!-- example external -->
-      <article class="card">
-        <div class="meta">External · Oct 21, 2025</div>
-        <h3 style="margin:6px 0"><a href="#" target="_blank" rel="noopener">Why young people should care about local elections</a></h3>
-        <p style="color:var(--muted)">Link and short description. Replace with real link and summary.</p>
-      </article>
-
-      <!-- example internal -->
-      <article class="card">
+    <!-- Magazine hero: feature (big) + side summary -->
+    <div class="hero-large" data-sr style="margin-top:18px">
+      <div style="min-height:220px">
+        <a href="#" target="_blank" rel="noopener"><img src="https://source.unsplash.com/900x600/?courtroom" alt="Featured article image"></a>
+      </div>
+      <div class="content">
         <div class="meta">YCIN Brief · Oct 10, 2025</div>
-        <h3 style="margin:6px 0"><a href="#post-1">Understanding a recent school funding decision — student guide</a></h3>
-        <p style="color:var(--muted)">Short explainer written by YCIN staff.</p>
+        <h2 style="margin:8px 0 10px"><a href="#post-1">Understanding a recent school funding decision — student guide</a></h2>
+        <p style="color:var(--muted)">A short explainer that breaks down a recent funding decision, why it matters to students, and how to take practical civic steps.</p>
+        <div style="margin-top:14px">
+          <a class="btn" href="#post-1">Read the brief</a>
+          <a class="btn ghost" href="index.html" style="margin-left:8px">Back to home</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- smaller cards -->
+    <section class="grid" aria-label="More articles">
+      <article class="card" data-sr>
+        <div class="meta">External · Oct 21, 2025</div>
+        <h3 style="margin:8px 0"><a href="https://www.nytimes.com/" target="_blank" rel="noopener">Why young people should care about local elections</a></h3>
+        <p style="color:var(--muted)">How local policy affects school funding and after-school opportunities.</p>
       </article>
 
-      <!-- more placeholders -->
-      <article class="card"><div class="meta">External · Sep 30, 2025</div><h3 style="margin:6px 0"><a href="#">How law clinics create career pathways</a></h3><p style="color:var(--muted)">Curated external link.</p></article>
+      <article class="card" data-sr>
+        <div class="meta">External · Sep 30, 2025</div>
+        <h3 style="margin:8px 0"><a href="https://www.politico.com/" target="_blank" rel="noopener">How law clinics create career pathways for students</a></h3>
+        <p style="color:var(--muted)">Examples of clinics that help students get hands-on legal experience.</p>
+      </article>
+
+      <article class="card" data-sr>
+        <div class="meta">YCIN Resource · Jul 12, 2025</div>
+        <h3 style="margin:8px 0"><a href="#post-2">How to write a civic-minded college essay</a></h3>
+        <p style="color:var(--muted)">Tips for putting civic work into your college application in a meaningful way.</p>
+      </article>
     </section>
 
     <div style="height:28px"></div>
 
-    <!-- Sample internal post content -->
-    <article id="post-1" style="background:var(--white);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.04)">
+    <!-- sample internal posts -->
+    <article id="post-1" class="card" data-sr>
       <div class="meta">YCIN Brief · Oct 10, 2025</div>
-      <h2 style="margin-top:6px">Understanding a recent school funding decision — student guide</h2>
-      <p style="color:var(--muted)">A quick breakdown written for students about why school funding decisions matter for civic education and internships.</p>
-      <p> <!-- sample content --> This is a short example post. Replace this paragraph with your writeup. Explain the case, why it matters for students, and 2–3 concrete actions youth can take (attend a school board meeting, write to representatives, join a YCIN program).</p>
+      <h2>Understanding a recent school funding decision — student guide</h2>
+      <p class="muted">This is a sample post. Replace this content with your own YCIN writeups. Explain the case, why it matters, and 2–3 actions students can take.</p>
+      <p>Example actions: attend a school board meeting, write to a local rep, join YCIN mock trial.</p>
+    </article>
+
+    <article id="post-2" class="card" data-sr style="margin-top:18px">
+      <div class="meta">YCIN Resource · Jul 12, 2025</div>
+      <h3>How to write a civic-minded college essay</h3>
+      <p class="muted">Short guide for students on framing civic experiences in application essays.</p>
     </article>
   </main>
 
@@ -71,5 +101,8 @@
       <div style="text-align:right">Contact: ycinnetwork@gmail.com</div>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>ScrollReveal().reveal('[data-sr], .hero-large, .card', {distance:'30px',origin:'bottom',interval:80,duration:650});</script>
 </body>
 </html>
