@@ -2,41 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>About — Youth Civic Impact Network</title>
+  <title>About — YCIN</title>
   <style>
-    :root{--navy:#0b2340;--white:#ffffff;--gold:#C99A2A;--muted:#6b7a8a;--bg:#f4f6f9;--max-width:1100px;font-family:Inter, system-ui, Arial;}
+    :root{--navy:#0b2340;--white:#ffffff;--gold:#C99A2A;--muted:#6b7a8a;--bg:#f4f6f9;--max-width:1120px;font-family:Inter,system-ui,Arial;}
     body{margin:0;background:var(--bg);color:var(--navy)}
     .container{max-width:var(--max-width);margin:0 auto;padding:28px}
     header{background:linear-gradient(180deg, rgba(11,35,64,1), rgba(11,35,64,0.95));color:var(--white)}
-    .nav-bar{display:flex;align-items:center;justify-content:space-between;padding:18px 24px}
-    .logo{width:48px;height:48px;background:var(--white);border-radius:8px;display:grid;place-items:center;color:var(--navy);font-weight:700}
-    nav a{color:rgba(255,255,255,0.95);margin-left:18px}
-    .card{background:var(--white);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+    .nav-bar{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:var(--max-width);margin:0 auto}
+    .logo{width:48px;height:48px;background:var(--white);border-radius:8px;display:grid;place-items:center;color:var(--navy);font-weight:800}
+    nav a{color:rgba(255,255,255,0.95);margin-left:18px;font-weight:700}
+    .card{background:var(--white);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04);margin-bottom:18px}
   </style>
 </head>
 <body>
   <header>
-    <div class="nav-bar container">
+    <div class="nav-bar">
       <div style="display:flex;gap:12px;align-items:center">
         <div class="logo">YCIN</div>
         <div>
-          <div style="font-weight:700">Youth Civic Impact Network</div>
-          <div style="font-size:13px;color:rgba(255,255,255,0.8)">Because justice starts with education.</div>
+          <div style="font-weight:800">Youth Civic Impact Network</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.78)">Because justice starts with education.</div>
         </div>
       </div>
-      <nav><a href="index.html">Home</a><a href="articles.html">Articles</a><a href="volunteer.html">Volunteer</a></nav>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="articles.html">Articles</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a class="btn" href="mailto:ycinnetwork@gmail.com" style="margin-left:12px;background:var(--gold);color:var(--navy);padding:8px 12px;border-radius:8px;font-weight:800;text-decoration:none">Contact</a>
+      </nav>
     </div>
   </header>
 
   <main class="container" style="padding-top:28px">
-    <div class="card">
+    <div class="card" data-sr>
       <h1 style="margin-top:0">About YCIN</h1>
-      <p style="color:var(--muted)">Youth Civic Impact Network (YCIN) was founded to expand access to law, policy, and civic careers for young people from diverse backgrounds.</p>
+      <p class="muted">Youth Civic Impact Network (YCIN) was founded to expand access to law, policy, and civic careers for young people from diverse backgrounds.</p>
+
       <h2>Mission</h2>
-      <p>We demystify legal and civic careers through workshops, mentorship programs, and hands-on projects so students can build competitive college applications and explore career paths in public service.</p>
+      <p>We demystify legal and civic careers through workshops, mentorship, and hands-on projects so students can build competitive college applications and explore career paths in public service.</p>
 
       <h2>Founder</h2>
-      <p><strong>Tahira Bari</strong> — Founder. Brief one-line about background (add education/role here).</p>
+      <p><strong>Tahira Bari</strong> — Founder. (Add a one-line bio: e.g., law student, debate coach, civics teacher — edit this to your real background.)</p>
 
       <h2>How we work</h2>
       <ul>
@@ -46,15 +52,16 @@
       </ul>
 
       <h2>Values</h2>
-      <p style="color:var(--muted)">Access, mentorship, rigor, and long-term student support.</p>
+      <p class="muted">Access, mentorship, rigor, and long-term student support.</p>
     </div>
 
-    <div style="height:18px"></div>
-
-    <div class="card">
+    <div class="card" data-sr>
       <h2>Partnerships & Advisors</h2>
-      <p style="color:var(--muted)">List partner schools, clinics, or advisors here when ready.</p>
-      <a href="volunteer.html" style="display:inline-block;margin-top:10px;padding:10px 14px;background:var(--gold);color:var(--navy);border-radius:8px;font-weight:700">Become a partner</a>
+      <p class="muted">List partner schools, clinics, or advisors here when ready. Add logos below when you have partner permissions.</p>
+      <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+        <div style="width:140px;height:60px;background:#f1f4f8;border-radius:8px;display:grid;place-items:center;color:var(--muted)">Partner logo</div>
+        <div style="width:140px;height:60px;background:#f1f4f8;border-radius:8px;display:grid;place-items:center;color:var(--muted)">Partner logo</div>
+      </div>
     </div>
   </main>
 
@@ -64,5 +71,8 @@
       <div style="text-align:right">Contact: ycinnetwork@gmail.com</div>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>ScrollReveal().reveal('[data-sr], .card', {distance:'30px',origin:'bottom',interval:80,duration:600});</script>
 </body>
 </html>
